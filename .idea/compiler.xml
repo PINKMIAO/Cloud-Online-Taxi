@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-eureka-7002" />
+        <module name="cloud-eureka-7001" />
+        <module name="demo" />
+        <module name="cloud-passenger-user-8002" />
+        <module name="cloud-service-sms" />
+        <module name="internal-common" />
+        <module name="cloud-verification-code-8001" />
+        <module name="could-eureka-7002" />
+        <module name="cloud-consumer-passenger-80" />
+        <module name="cloud-eureka-7003" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-consumer-passenger-80" options="-parameters" />
+      <module name="cloud-eureka-7001" options="-parameters" />
+      <module name="cloud-eureka-7002" options="-parameters" />
+      <module name="cloud-eureka-7003" options="-parameters" />
+      <module name="cloud-passenger-user-8002" options="-parameters" />
+      <module name="cloud-verification-code-8001" options="-parameters" />
+      <module name="demo" options="-parameters" />
+    </option>
+  </component>
+</project>

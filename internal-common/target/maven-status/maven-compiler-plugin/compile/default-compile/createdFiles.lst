@@ -1,0 +1,7 @@
+com\baven\dto\cloudcomsumerpassenger80\request\ShortMsgRequest.class
+com\baven\constant\CommonStatusEnum.class
+com\baven\constant\IdentityConstant.class
+com\baven\constant\RedisKeyPrefixConstant.class
+com\baven\dto\cloudverificationcode8002\response\VerifyCodeResponse.class
+com\baven\constant\TestColor.class
+com\baven\dto\ResponseResult.class

@@ -1,0 +1,13 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-verification-code
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-7001:7001/eureka/,http://eureka-7002:7002/eureka/,http://eureka-7003:7003/eureka/
+  instance:
+    instance-id: cloud-verification-code-8001
