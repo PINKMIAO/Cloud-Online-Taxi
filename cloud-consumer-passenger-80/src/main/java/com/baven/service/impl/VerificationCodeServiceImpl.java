@@ -23,6 +23,7 @@ public class VerificationCodeServiceImpl implements VerificationCodeService {
     @Override
     public ResponseResult send(String phoneNumber) {
         ResponseResult result = verificationCodeRestTemplateService.generatorCode(IdentityConstant.PASSENGER, phoneNumber);
+
         VerifyCodeResponse verifyCodeResponse = null;
         if (result.getCode() == CommonStatusEnum.SUCCESS.getCode()) {
 //            VerifyCodeResponse data1 = (VerifyCodeResponse) result.getData();

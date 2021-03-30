@@ -7,12 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-eureka-7002" />
+        <module name="cloud-passenger-user-8002" />
         <module name="cloud-eureka-7001" />
         <module name="demo" />
-        <module name="cloud-passenger-user-8002" />
+        <module name="cloud-zuul-9001" />
         <module name="cloud-service-sms" />
         <module name="internal-common" />
+        <module name="cloud-service-sms-8003" />
+        <module name="cloud-eureka-7002" />
         <module name="cloud-verification-code-8001" />
         <module name="could-eureka-7002" />
         <module name="cloud-consumer-passenger-80" />
@@ -28,7 +30,9 @@
       <module name="cloud-eureka-7002" options="-parameters" />
       <module name="cloud-eureka-7003" options="-parameters" />
       <module name="cloud-passenger-user-8002" options="-parameters" />
+      <module name="cloud-service-sms-8003" options="-parameters" />
       <module name="cloud-verification-code-8001" options="-parameters" />
+      <module name="cloud-zuul-9001" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>

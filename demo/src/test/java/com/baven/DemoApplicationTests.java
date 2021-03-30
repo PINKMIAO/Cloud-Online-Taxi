@@ -1,5 +1,13 @@
 package com.baven;
 
+import com.aliyuncs.CommonRequest;
+import com.aliyuncs.CommonResponse;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.IAcsClient;
+import com.aliyuncs.exceptions.ClientException;
+import com.aliyuncs.exceptions.ServerException;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.profile.DefaultProfile;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -46,9 +54,30 @@ class DemoApplicationTests {
     @Test
     public void test01() {
 
-        String s1 = "   dfsdfsdf  ";
-        System.out.println(s1);
-        System.out.println(s1.trim());
+        // 连接阿里云
+        DefaultProfile profile = DefaultProfile.getProfile("cn-qingdao", "LTAI5tRALnsVz5AJfvMvDx9L", "<accessSecret>");
+        IAcsClient client = new DefaultAcsClient(profile);
+
+        // 构建请求
+        CommonRequest request = new CommonRequest();
+        request.setSysMethod(MethodType.POST);
+        request.setSysDomain("dysmsapi.aliyuncs.com");
+        request.setSysVersion("2017-05-25");
+        request.setSysAction("SendSms");
+
+        request.putQueryParameter("PhoneNumbers", "13134439827");
+        request.putQueryParameter("SignName", "");
+        request.putQueryParameter("TemplateCode", "");
+
+
+        try {
+            CommonResponse response = client.getCommonResponse(request);
+            System.out.println(response.getData());
+        } catch (ServerException e) {
+            e.printStackTrace();
+        } catch (ClientException e) {
+            e.printStackTrace();
+        }
 
     }
 
